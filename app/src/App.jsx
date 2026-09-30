@@ -3,9 +3,9 @@ import "./App.css";
 
 function App() {
   const [todos, setTodos] = useState([
-    { id: 1, text: "Köp kaffe", done: false },
-    { id: 2, text: "Öppna campet", done: true },
-    { id: 3, text: "Pusha till GitHub", done: false },
+    { id: 1, text: "Mjölk", done: false },
+    { id: 2, text: "Bröd", done: true },
+    { id: 3, text: "Ägg", done: false },
   ]);
   const [text, setText] = useState("");
 
@@ -32,12 +32,12 @@ function App() {
 
   return (
     <main className="app">
-      <h1>Min ToDo</h1>
+      <h1>Min inköpslista</h1>
       <form className="input-row" onSubmit={addTodo}>
         <input
           value={text}
           onChange={(e) => setText(e.target.value)}
-          placeholder="Ny uppgift"
+          placeholder="lägg till vara"
         />
         <button type="submit">Lägg till</button>
       </form>
@@ -45,7 +45,7 @@ function App() {
         {todos.map((t) => (
           <li key={t.id} className={t.done ? "todo completed" : "todo"}>
             <button type="button" onClick={() => toggleDone(t.id)}>
-              {t.done ? "Avmarkera" : "Klar"}
+              {t.done ? "inte köpt" : "köpt"}
             </button>{" "}
             {t.text}{" "}
             <button type="button" onClick={() => removeTodo(t.id)}>

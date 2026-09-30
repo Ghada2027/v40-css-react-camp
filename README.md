@@ -31,3 +31,8 @@ Jag kontrollerar att klassnamnet i JSX är samma som i CSS. I min app används c
 ### 3. Inspect
 
 Jag använder Inspect och tittar på elementet. Om completed finns på elementet men stilen inte syns, kontrollerar jag CSS-regeln i Styles.
+
+
+#### Vad min app gör 
+Min inköpslista hjälper användaren att hålla koll på varor som ska köpas och vilka som är köpta. CSS kopplas till React genom import "./App.css" och className.
+
